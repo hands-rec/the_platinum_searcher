@@ -49,9 +49,9 @@ func (g fixedGrep) grep(path string) {
 		// detect encoding.
 		if !identified {
 			limit := c
-			if limit > 512 {
-				limit = 512
-			}
+			//			if limit > 512 {
+			//				limit = 512
+			//			}
 
 			encoding = detectEncoding(buf[:limit])
 			if encoding == ERROR || encoding == BINARY {
